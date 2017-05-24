@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace BrainCore
+namespace BrainTrainer
 {
     public class Difficulty
     {
@@ -12,17 +12,33 @@ namespace BrainCore
 			get => dims;
 		}
 
+		double[] rate;
+
 		List<string> names;
 
 		List<Tuple<double[], bool>> data;
+
+		public void AddLevel(double[] level, bool succeed)
+		{
+			data.Add(new Tuple<double[], bool>(level, succeed));
+
+			if (data.Count > 1000)
+			{
+				data.RemoveAt(0);
+			}
+		}
 
 		public Difficulty(int dims, List<string> names)
 		{
 			this.dims = dims;
 			this.names = new List<string>(names);
-		}
+			rate = new double[dims];
 
-		
+			for (int i = 0; i < dims; i++)
+			{
+				rate[i] = 1;
+			}
+		}
 
 		public double[] GenerateRandom()
 		{
@@ -144,7 +160,7 @@ namespace BrainCore
 			{
 				//little bit upper
 				avrPos /= countPos;
-				resultScalar = ((avrPos + maxPos) / 2) * (random.NextDouble() * 0.3);
+				resultScalar = ((avrPos + maxPos) / 2) * ExRandom.NextDouble(0.3);
 			}
 
 			double[] result = new double[dims];
@@ -158,27 +174,12 @@ namespace BrainCore
 
 		#region random
 
-		static Random random = new Random();
-
-		static double NextGaussian(double mu = 0, double sigma = 1)
-		{
-			var u1 = random.NextDouble();
-			var u2 = random.NextDouble();
-
-			var rand_std_normal = Math.Sqrt(-2.0 * Math.Log(u1)) *
-								Math.Sin(2.0 * Math.PI * u2);
-
-			var rand_normal = mu + sigma * rand_std_normal;
-
-			return rand_normal;
-		}
-
 		static double NextPositive()
 		{
 			double x;
 			do
 			{
-				x = NextGaussian(0.5, 0.5);
+				x = ExRandom.NextGaussian(0.5, 0.5);
 			}
 			while (x > 0.1 && x < 0.9);
 

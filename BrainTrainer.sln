@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26430.6
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrainTrainer", "BrainTrainer\BrainTrainer.csproj", "{494A7195-8778-4372-A711-F6A7B352055F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RunnerConsole", "RunnerConsole\RunnerConsole.csproj", "{5D2E2C42-A2AD-4673-B823-EEBEAD8FA726}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{494A7195-8778-4372-A711-F6A7B352055F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{494A7195-8778-4372-A711-F6A7B352055F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{494A7195-8778-4372-A711-F6A7B352055F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D2E2C42-A2AD-4673-B823-EEBEAD8FA726}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D2E2C42-A2AD-4673-B823-EEBEAD8FA726}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D2E2C42-A2AD-4673-B823-EEBEAD8FA726}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D2E2C42-A2AD-4673-B823-EEBEAD8FA726}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
