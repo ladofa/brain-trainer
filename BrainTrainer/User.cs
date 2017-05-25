@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace BrainTrainer
 {
+	[Serializable]
 	public class User
 	{
 		public string Name
@@ -14,15 +15,12 @@ namespace BrainTrainer
 			set;
 		}
 
-		List<Game> games;
+		public List<Game> Games;
 
-		public void SaveData()
+		public User(string name)
 		{
-			throw new NotImplementedException();
-		}
-		public void LoadData()
-		{
-			throw new NotImplementedException();
+			Name = name;
+			Games.Add(new Games.MemoryStack());
 		}
 	}
 }

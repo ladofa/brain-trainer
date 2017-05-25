@@ -48,5 +48,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BrainTrainer\BrainTrainer.csproj">
+      <Project>{494a7195-8778-4372-a711-f6a7b352055f}</Project>
+      <Name>BrainTrainer</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

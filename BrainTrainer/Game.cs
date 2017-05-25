@@ -22,6 +22,7 @@ namespace BrainTrainer
 		B
 	}
 
+	[Serializable]
 	public abstract class Game
 	{
 		public Game(string name, Difficulty difficulty)

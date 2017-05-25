@@ -2,10 +2,14 @@
 using System.Collections.Generic;
 using System.Text;
 
+
+
 namespace BrainTrainer
 {
-    public class Difficulty
+	[Serializable]
+	public class Difficulty
     {
+		
 		int dims;
 		public int Dims
 		{
@@ -185,7 +189,14 @@ namespace BrainTrainer
 
 			return x;
 		}
+		#endregion
+
+		#region xml
+
+
+		#endregion
+
 	}
 
-#endregion
+
 }
