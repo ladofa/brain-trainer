@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<langulage name="Korean" native="한국어">
+	<GameList>
+		<NoCurrentUser>
+			현재 유저가 없습니다.
+		</NoCurrentUser>
+	</GameList>
+</langulage>

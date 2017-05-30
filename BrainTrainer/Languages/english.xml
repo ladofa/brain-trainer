@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<langulage name="English" native="English">
+	<Messages>
+		<GameList>
+			<NoCurrentUser>
+				There is no current user.
+			</NoCurrentUser>
+			<Done>
+				Total %s games.
+			</Done>
+		</GameList>
+		<GameSelect>
+			<NoCurrentUser>
+				There is no current user.
+			</NoCurrentUser>
+			<Done>
+				The Game : %s is selected.
+			</Done>
+			<NotFound>
+				There is no game name : %s.
+			</NotFound>
+		</GameSelect>
+	</Messages>
+</langulage>

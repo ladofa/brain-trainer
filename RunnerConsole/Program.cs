@@ -44,9 +44,10 @@ namespace RunnerConsole
 			{
 				if (args[1] == "list")
 				{
-					foreach (var e in manager.CurrentUser.Games)
+					Message message = manager.GameList();
+					if (message == Messages.GameList.NoCurrentUser)
 					{
-						Console.WriteLine(e.Name);
+
 					}
 				}
 				else if (args[1] == "select")
@@ -66,8 +67,6 @@ namespace RunnerConsole
 			StreamWriter writer = new StreamWriter(fs);
 			writer.Write(true);
 			
-			
-
 			manager = new Manager();
 			try
 			{

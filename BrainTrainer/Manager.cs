@@ -45,11 +45,23 @@ namespace BrainTrainer
 			//CurrentUser = null;
 		}
 
+		public Message GameList()
+		{
+			if (CurrentUser == null)
+			{
+				return Messages.GameList.NoCurrentUser;
+			}
+			else
+			{
+				return Messages.GameList.Done;
+			}
+		}
+
 		public Message SelectGame(string name)
 		{
 			if (CurrentUser == null)
 			{
-				return Messages.SelectGame.NoCurrentUser;
+				return Messages.GameSelect.NoCurrentUser;
 			}
 			
 			foreach (Game game in CurrentUser.Games)
@@ -57,11 +69,24 @@ namespace BrainTrainer
 				if (game.Name == name)
 				{
 					CurrentGame = game;
-					return Messages.SelectGame.NoCurrentUser;
+					return Messages.GameSelect.Done;
 				}
 			}
 
-			return Messages.SelectGame.NotFound;
+			return Messages.GameSelect.NotFound;
+		}
+
+		public Message SelectGame(int num)
+		{
+			if (CurrentUser == null)
+			{
+				return Messages.GameSelect.NoCurrentUser;
+			}
+
+			if (num < 0 || num >= CurrentUser.Games.Count)
+			{
+				return Messages.GameSelect.IllegalNumber;
+			}
 		}
 	}
 }
